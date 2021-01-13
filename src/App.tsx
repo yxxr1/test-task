@@ -5,7 +5,8 @@ import Posts from "./components/Posts";
 
 const Container = styled.div`
   align-self: center;
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 `

@@ -16,7 +16,7 @@ const InputC = styled.input`
       color: #555;
       outline: none;
       padding: 4px 10px;
-      margin: 5px 0;
+      margin: 5px;
     `
 export default forwardRef(({value, onChange, ...props}: Props, ref: any) => {
     return (<InputC
