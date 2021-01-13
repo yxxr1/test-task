@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import styled from 'styled-components'
+import Input from "./components/Input";
+import Posts from "./components/Posts";
+
+const Container = styled.div`
+  align-self: center;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+`
 
 function App() {
+  const [filter, setFilter] = useState<string>('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Input value={filter} onChange={setFilter} />
+      <Posts filter={filter}></Posts>
+    </Container>
   );
 }
 
